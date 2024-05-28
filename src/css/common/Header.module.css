@@ -1,0 +1,62 @@
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 20px 40px 0 40px;
+}
+
+.headerBox a {
+    text-decoration: none;
+}
+
+.logo {
+    color: #6080cd;
+    font-size: 60px;
+    margin-right: auto;
+    transform: skew(-10deg);
+    transition: text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px #6080cd; /* 호버할 때 빛 번짐 효과 추가 */
+}
+
+.navLinks span {
+    margin: 5px 5px 5px 5px; 
+    font-size: 20px;
+    color: #5b606d;
+}
+
+.navLinks a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.navLinks a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #5b606d;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.separator {
+    width: 100%;
+    height: 1px; /* 선의 높이 설정 */
+    background-color: #ccc; /* 선의 색상 설정 */
+    margin-top: 20px; /* 선 위쪽 여백 설정 */
+}
+

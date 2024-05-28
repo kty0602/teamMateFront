@@ -1,0 +1,49 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: slategray;
+    height: 100px;
+    margin: 30px 25% 0 25%;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.input {
+    height: 20px;
+    width: 300px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin-right: 10px;
+}
+
+.searchButton {
+    color: black;
+    width: 60px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.registerBox {
+    margin-left: 200px;
+}
+
+.register {
+    background-color: whitesmoke;
+    color: black;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.touch {
+    text-decoration: none;
+}

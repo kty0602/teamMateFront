@@ -1,0 +1,42 @@
+.registerBox {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    height: 100%;
+    align-items: flex-start;
+    margin: 40px 20% 5% 20%;
+    padding: 0 40px 40px 40px;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.inputText {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+}
+
+.textArea {
+    width: 100%;
+    height: 450px;
+    resize: none;
+    font-size: 18px;
+}
+
+.registerButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #2D65F2;
+    padding: 5px 0 5px 0;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    font-size: 25px;
+}

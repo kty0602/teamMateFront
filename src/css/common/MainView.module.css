@@ -1,0 +1,100 @@
+.CarouselDiv {
+    display: flex;
+    padding: 0 5%; /* 양 옆으로 40px의 패딩을 줍니다. */
+    gap: 50px;
+}
+
+/* 각 카드에 직접 hover 효과 적용 */
+.card1:hover, .card2:hover, .card3:hover, .card4:hover {
+    opacity: 1; /* 마우스를 올린 카드의 투명도 유지 */
+    transform: scale(1.1); /* 크기를 조금 더 키웁니다 */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* div 클래스에 대한 스타일 */
+.card1 {
+    margin-top: 20px;
+    height: 550px;
+    width: 500px;
+    background-image: url('../../img/team.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-image: fill 0 linear-gradient(#0001, #3c3c3c);
+    position: relative;
+}
+
+.card2 {
+    margin-top: 20px;
+    height: 550px;
+    width: 500px;
+    background-image: url('../../img/competition.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-image: fill 0 linear-gradient(#0001, #3c3c3c);
+    position: relative;
+}
+
+.card3 {
+    margin-top: 20px;
+    height: 550px;
+    width: 500px;
+    background-image: url('../../img/job.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-image: fill 0 linear-gradient(#0001, #3c3c3c);
+    position: relative;
+}
+
+.card4 {
+    margin-top: 20px;
+    height: 550px;
+    width: 500px;
+    background-image: url('../../img/community.png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-image: fill 0 linear-gradient(#0001, #3c3c3c);
+    position: relative;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover {
+    transform: scale(1.1);
+}
+
+.card1:hover > .card1:not(:hover),
+.card2:hover > .card2:not(:hover),
+.card3:hover > .card3:not(:hover),
+.card4:hover > .card4:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9);
+}
+
+.cardText {
+    text-align: center;
+    position: absolute;
+    margin: 0 20px 0 20px;
+    bottom: 40px; 
+    color: white; 
+    font-size: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    opacity: 0; /* 기본적으로 숨기기 */
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.card1:hover .cardText,
+.card2:hover .cardText,
+.card3:hover .cardText,
+.card4:hover .cardText {
+    opacity: 1; /* 마우스를 올렸을 때 보이기 */
+    transform: translateY(0);
+}
+
+

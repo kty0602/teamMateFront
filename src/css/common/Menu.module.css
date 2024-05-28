@@ -1,0 +1,59 @@
+.menuArea {
+    display: block;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    margin-top: 3%;
+    justify-content: center; /* 가로 방향 가운데 정렬 */
+}
+
+ul {
+    height: 50px;
+    border-radius: 8px;
+    border-color: gray;
+    border-width: 1.5px;
+    border-style: solid;
+    display: flex;
+    align-items: center; /* 세로 방향 가운데 정렬 */
+    padding: 10px 50px 10px 50px;
+    gap: 60px;
+    list-style: none;
+}
+
+span {
+    font-size: 30px;
+    color: gray;
+}
+
+span {
+    color: black;
+    font-size: 30px;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.link::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #6080cd;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+

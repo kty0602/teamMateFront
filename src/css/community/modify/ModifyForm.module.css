@@ -1,0 +1,66 @@
+.readPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.modifyTitle {
+    width: 800px;
+    height: 25px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.modifyContent {
+    width: 780px;
+    height: 200px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;  
+    resize: none;  
+    overflow: auto;
+    outline: none;
+}
+
+.readName {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 800px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.readArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    width: 800px;
+    height: 450px;
+    resize: none;
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.registerButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #2D65F2;
+    padding: 5px 0 5px 0;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    font-size: 25px;
+}

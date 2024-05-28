@@ -1,0 +1,77 @@
+.infoBox{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    height: 100%;
+    align-items: flex-start;
+    margin: 40px 20% 0 20%;
+    padding: 0 40px 40px 40px;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.introduce {
+    width: 100%;
+    margin: 40px 0 40px 0;
+}
+
+.skillBox {
+    overflow-y: auto;
+    height: 100px;
+    width: 100%;
+    margin: 10px 0 40px 0;
+    border-radius: 15px;
+    border-color: rgb(91, 149, 231);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.Text {
+    margin-left: 5px;
+    font-size: 25px;
+    font-style: normal;
+    color: black;
+}
+
+.Button {
+    height: 30px;
+    width: 70px;
+    font-size: 22px;
+    color: #3053a4;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.introduceInput {
+    margin-top: 10px;
+    height: 90px;
+    width: 100%;
+    font-size: 20px;
+    overflow-y: auto;
+    resize: none;
+}
+
+.box {
+    display: inline-block;
+    margin: 10px 10px 0 10px;
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(91, 149, 231);
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+}
+
+.skillName {
+    font-size: 18px;
+    color: black;
+    margin-right: 10px;
+}
+
+.deleteButton {
+    font-size: 18px;
+    color: #3053a4;
+    cursor: pointer;
+}

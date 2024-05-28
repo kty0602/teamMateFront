@@ -1,0 +1,89 @@
+.boardMain {
+    position: relative;
+    width: 1000px;
+    height: 620px;
+    margin: 30px auto;
+    border: 2px solid black;
+}
+
+.boardHeader, .boardRow {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr 1fr; /* 각 열의 비율을 설정합니다. */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.boardHeader {
+    border-bottom: 2px solid black;
+    background-color: #f0f0f0;
+}
+
+.boardTable {
+    margin-bottom: 1.5px;
+    max-height: 360px;
+}
+
+.boardRow {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.boardRow p {
+    margin: 5px;
+    
+}
+
+.pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.pagination button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+  
+.pagination button.active {
+    background-color: #0056b3;
+    color: #fff; /* 현재 페이지 글자색을 흰색으로 지정 */
+}
+  
+.pagination button.disabled {
+    background-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+  
+.pagination-arrow {
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #007bff;
+}
+  
+.pagination-arrow.disabled {
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+.aTitle {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+

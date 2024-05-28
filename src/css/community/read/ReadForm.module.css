@@ -1,0 +1,82 @@
+.readPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.readButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 720px;
+}
+
+.font1 {
+    color: rgb(33, 33, 230);
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.font2 {
+    color: red;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.replyFont1 {
+    color: rgb(33, 33, 230);
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.replyFont2 {
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.readTitle {
+    padding-left: 10px;
+    font-size: 20px;
+    width: 800px;
+    height: 25px;
+    margin-top: 15px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    pointer-events: none;
+}
+
+.readName {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 800px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.readArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    width: 800px;
+    height: 450px;
+    resize: none;
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.aTitle {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
