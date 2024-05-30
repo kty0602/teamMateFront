@@ -1,0 +1,8 @@
+.tableBox {
+    display: block;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 1200px;
+    height: 800px;
+}

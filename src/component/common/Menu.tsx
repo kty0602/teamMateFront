@@ -6,11 +6,17 @@ const Menu = () => {
         <div className="menuArea">
             <nav>
                 <ul>
-                    <span><a className={styles.link}>팀 매칭</a></span>
+                    <Link to = "/teamMate" className={styles.link}>
+                        <span>팀 매칭</span>
+                    </Link>
                     <span>|</span>
-                    <span><a className={styles.link}>공모전</a></span>
+                    <Link to ="/" className={styles.link}>
+                        <span>공모전</span>
+                    </Link>
                     <span>|</span>
-                    <span><a className={styles.link}>채용정보</a></span>
+                    <Link to ="/" className={styles.link}>
+                        <span>채용정보</span>
+                    </Link>
                     <span>|</span>
                     <Link to = "/community" className={styles.link}>
                         <span>커뮤니티</span>

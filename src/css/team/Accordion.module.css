@@ -1,0 +1,51 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #2D65F2;
+    border-color: #2D65F2;
+    color: white;
+    width: 300px;
+    cursor: pointer;
+    height: 50px; /* 초기 높이 설정 */
+    transition: height 0.6s ease;
+}
+
+.block.open {
+    height: 300px; /* .open 클래스가 적용될 때의 높이 설정 */
+}
+
+.menuText {
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.block ul {
+    display: none; /* 기본적으로 숨깁니다 */
+    display: grid; /* grid 레이아웃 사용 */
+    grid-template-columns: repeat(2, 1fr); /* 2열로 구성 */
+    gap: 5px;
+    overflow-y: auto; /* 스크롤 가능 */
+    background-color: white; /* 배경색 변경 */
+    color: black; /* 글자색 변경 */
+    border-top: 1px solid #2D65F2; /* 상단 테두리 추가 */
+    height: 200px;
+    width: 90%; /* 전체 너비 사용 */
+    padding: 10px; /* 내부 여백 추가 */
+}
+
+.block.open ul {
+    display: grid; /* 열릴 때 grid 레이아웃 유지 */
+}
+
+.block li {
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* 항목 사이에 구분선 추가 */
+}

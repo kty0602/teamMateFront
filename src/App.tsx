@@ -10,6 +10,7 @@ import RegisterPage from './pages/community/RegisterPage';
 import ReadPage from './pages/community/ReadPage';
 import ModifyPage from './pages/community/ModifyPage';
 import ReplyModifyPage from './pages/community/ReplyModifyPage';
+import TeamMatePage from './pages/TeamMatePage';
 
 import store from './redux/Store';
 
@@ -23,11 +24,18 @@ function App() {
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/sign" element={<SignPage/>} />
           <Route path="/userInfo" element={<UserInfoPage/>} />
+
+          {/* 커뮤니티 페이지 */}
           <Route path="/community" element={<CommunityPage/>} />
           <Route path="/register" element={<RegisterPage/>} />
           <Route path="/read/:idx"  element={<ReadPage/>}/>
           <Route path="/modify/:idx"  element={<ModifyPage/>}/>
           <Route path="/replyModify"  element={<ReplyModifyPage/>}/>
+          {/* 커뮤니티 페이지 */}
+
+          {/* 팀 매칭 페이지 */}
+          <Route path="/teamMate"  element={<TeamMatePage/>}/>
+          {/* 팀 매칭 페이지 */}
         </Routes>
       </BrowserRouter>
     </Provider>
