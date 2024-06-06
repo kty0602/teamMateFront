@@ -3,6 +3,138 @@
     border-color: black;
     border-width: 1px;
     border-style: solid;
+    padding: 2%;
     width: 1200px;
-    height: 800px;
+    height: 1200px;
+    position: relative; 
+    padding-bottom: 20px; 
+}
+
+.buttonTable {
+    display: flex;
+    border-bottom: 1px solid #5d5858;
+}
+
+.text {
+    margin-left: 10px;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+}
+
+.selected {
+    color: black;
+    text-decoration: underline;
+}
+
+.dataTable {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 90%;
+    gap: 20px;
+}
+
+.box {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 5px;
+}
+
+.status {
+    padding: 0 10px 0 10px;
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+}
+
+.header {
+    display: flex;
+    padding-top: 5px;
+    gap: 60px;
+}
+
+.itemTitle {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.registerButton {
+    font-size: 20px;
+    color: white;
+    width: 100px;
+    height: 35px;
+    background-color: #2D65F2;
+    border-color: #2D65F2;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.body {
+    display: flex;
+    padding: 5px;
+    gap: 80px;
+    margin-top: 10px;
+}
+
+
+.itemText {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.comment {
+    margin-left: auto; 
+}
+
+.pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.pagination button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+  
+.pagination button.active {
+    background-color: #0056b3;
+    color: #fff; /* 현재 페이지 글자색을 흰색으로 지정 */
+}
+  
+.pagination button.disabled {
+    background-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+  
+.pagination-arrow {
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #007bff;
+}
+  
+.pagination-arrow.disabled {
+    color: #ddd;
+    cursor: not-allowed;
 }

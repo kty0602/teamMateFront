@@ -17,6 +17,7 @@
     transform: skew(-10deg);
     transition: text-shadow 0.3s ease;
     cursor: pointer;
+    user-select: none;
 }
 
 .logo:hover {
@@ -27,6 +28,7 @@
     margin: 5px 5px 5px 5px; 
     font-size: 20px;
     color: #5b606d;
+    user-select: none;
 }
 
 .navLinks a {

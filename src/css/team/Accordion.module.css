@@ -24,6 +24,7 @@
     padding: 10px;
     font-size: 22px;
     text-align: center;
+    user-select: none;
 }
 
 .block ul {

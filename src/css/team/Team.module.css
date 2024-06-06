@@ -1,3 +1,10 @@
-.userInfoBox {
+.teamBox {
     display: block;
+}
+
+.teamBox2 {
+    display: flex;
+    margin: 2% 6% 5% 6%;
+    padding: 2% 5% 2% 5%;
+    gap: 80px;
 }
