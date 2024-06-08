@@ -8,7 +8,7 @@ interface SearchProps {
     onSearch: (searchValue: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ onSearch}) => {
+const Search: React.FC<SearchProps> = ({ onSearch }) => {
     const [selectedOption, setSelectedOption] = useState<string>('');
     const [inputValue, setInputValue] = useState<string>('');
 

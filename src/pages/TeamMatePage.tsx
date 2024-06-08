@@ -30,7 +30,9 @@ const TeamMatePage = () => {
             const params = new URLSearchParams();
             if (ktypeValue) params.append('ktype', ktypeValue);
             if (searchValue) params.append('search', searchValue);
-            const url = `http://localhost:6600/team/list?page=${currentPage}${params.toString()}`;
+            const queryString = params.toString();
+            const url = `http://localhost:6600/team/list?page=${currentPage}${queryString ? `&${queryString}` : ''}`;
+            console.log('Fetching data from URL:', url);
             const response = await axios.get(url);
             setTeamData(response.data);
             console.log(response.data);
@@ -43,16 +45,23 @@ const TeamMatePage = () => {
         fetchData(searchValue, ktypeValue);
     }, [currentPage, searchValue, ktypeValue]);
 
+    const handleSearch = (searchValue: string, ktypeValue: string) => {
+        setSearchValue(searchValue);
+        setKtypeValue(ktypeValue);
+        setCurrentPage(1);  // 검색 시 페이지를 1로 초기화
+    };
+
     return(
         <div className={styles.teamBox}>
             <Header/>
             <Menu/>
             <div className={styles.teamBox2}>
-                <TeamMenu/>
+                <TeamMenu onSearch={handleSearch}/>
                 <TeamTable teamData={teamData} currentPage={currentPage} onPageClick={PageClick}/>
             </div>
         </div>
     );
 }
+
 
 export default TeamMatePage;
