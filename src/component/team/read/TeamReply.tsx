@@ -3,78 +3,74 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../../redux/Store';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import styles from "../../../css/community/read/Reply.module.css";
+import styles from "../../../css/team/read/TeamReply.module.css";
 
 interface replyProps {
-    rboard:any;
+    trTeam: any;
 }
 
-const Reply: React.FC<replyProps> = ({rboard}) => {
+
+const TeamReply: React.FC<replyProps> = ({trTeam}) => {
     const user = useSelector((state: RootState) => state.user);
     const userId = Number(user.idx);
     const navigate = useNavigate();
 
-    const [rcontent, setReply] = useState("");
+    const [trcontent, setReply] = useState("");
 
     const [replies, setReplies] = useState<{ 
         idx: number; 
-        rboard: number;
-        ruser: number;
-        rnickname: string; 
+        trTeam: number;
+        trUser: number;
+        trnickname: string; 
         regDate: string; 
-        rcontent: string 
+        trcontent: string; 
+        
     }[]>([]);
-
-    const Remove = async (idx: number) => {
-        try {
-            const response = await axios.post('http://localhost:6600/reply/remove', {
-                 idx:idx
-            });
-
-            // 삭제 성공 시에 추가적인 로직을 수행하거나 페이지를 리로드할 수 있습니다.
-            alert('댓글이 성공적으로 삭제되었습니다.');
-            fetchReplies();
-        } catch (error) {
-            console.error('댓글 삭제 중 에러 발생:', error);
-        }
-    };
-
 
     const fetchReplies = async () => {
         try {
-            const response = await axios.get(`http://localhost:6600/reply/board/${rboard}`);
-            setReplies(response.data);
+            const response = await axios.get(`http://localhost:6600/teamReply/team/${trTeam}`);
+            setReplies(response.data as { idx: number; trTeam: number; trUser: number, trnickname: string; regDate: string; trcontent: string; }[]);
         } catch (error) {
             console.error('댓글 데이터를 불러오는 도중 에러 발생:', error);
         }
     };
 
-    useEffect(() => {
-        fetchReplies();
-    }, [rboard]);
+    const Remove = async (idx: number) => {
+        try {
+            await axios.post('http://localhost:6600/teamReply/remove', { idx });
+            alert('댓글이 성공적으로 삭제되었습니다.');
+            fetchReplies(); // 댓글 목록을 다시 불러옵니다.
+        } catch (error) {
+            console.error('댓글 삭제 중 에러 발생:', error);
+        }
+    };
 
     const Register = async () => {
         try {
-            // rcontent의 내용을 서버에 전송
-            const response = await axios.post('http://localhost:6600/reply/register', {
-                ruser: userId,
-                rboard: rboard,
-                rcontent: rcontent
+            await axios.post('http://localhost:6600/teamReply/register', {
+                trUser: userId,
+                trTeam: trTeam,
+                trcontent: trcontent
             });
-
             alert('댓글이 성공적으로 등록되었습니다.');
-            fetchReplies();
+            setReply(""); // 텍스트박스를 비웁니다.
+            fetchReplies(); // 댓글 목록을 다시 불러옵니다.
         } catch (error) {
             console.error('댓글 등록 중 에러 발생:', error);
         }
     };
-    
+
+    useEffect(() => {
+        fetchReplies(); 
+    }, [trTeam]);
+
     return(
         <div className={styles.replyPage}>
             <div className={styles.replyRegister}>
                 <textarea 
                     className={styles.replyText}
-                    value={rcontent}
+                    value={trcontent}
                     onChange={(e) => setReply(e.target.value)}
                 />
                 <button className={styles.replySubmit} onClick={Register}>작성</button>
@@ -83,10 +79,10 @@ const Reply: React.FC<replyProps> = ({rboard}) => {
                 {replies.map((reply) => (
                     <div key={reply.idx} className={styles.replies}>
                         <div className={styles.replyHeader}>
-                            <text>[{reply.rnickname}] | [{reply.regDate}]</text>
-                            {reply.ruser === userId && (
+                            <text>[{reply.trnickname}] | [{reply.regDate}]</text>
+                            {reply.trUser === userId && (
                                 <div>
-                                    <Link to={`/replyModify`} state={{reply}} className={styles.aTitle}>
+                                    <Link to={`/teamReplyModify`} state={{reply}} className={styles.aTitle}>
                                         <text className={styles.replyFont1}>수정</text>
                                     </Link>
                                     <text>|</text>
@@ -95,7 +91,7 @@ const Reply: React.FC<replyProps> = ({rboard}) => {
                             )}
                         </div>
                         <div className={styles.replyContent}>
-                            <text>{reply.rcontent}</text>
+                            <text>{reply.trcontent}</text>
                         </div>
                     </div>
                 ))}
@@ -104,4 +100,4 @@ const Reply: React.FC<replyProps> = ({rboard}) => {
     );
 }
 
-export default Reply;
+export default TeamReply;

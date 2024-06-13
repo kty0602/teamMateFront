@@ -67,9 +67,18 @@ const RegisterForm = () => {
             link: link,
         };
 
+        if (!title) {
+            alert('제목을 입력해주세요.');
+            return;
+        }
+        if (!content) {
+            alert('내용을 입력해주세요.');
+            return;
+        }
+
         try {
             await axios.post('http://localhost:6600/board/register', postData);
-
+            alert("글이 등록되었습니다.");
             // 요청이 성공적으로 완료되면 '/community'로 이동
             navigate('/community');
         } catch (error) {

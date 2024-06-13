@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../redux/Store';
 import styles from "../../../css/community/modify/ModifyForm.module.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 interface ReadPageProps {
@@ -24,6 +24,11 @@ const ModifyForm: React.FC<ReadPageProps> = ({ idx, buser, btitle, bcontent, bni
     const navigate = useNavigate();
     const [modifiedContent, setModifiedContent] = useState<string>(bcontent);
     const [modifiedTitle, setModifiedTitle] = useState<string>(btitle);
+
+    useEffect(() => {
+        setModifiedTitle(btitle);
+        setModifiedContent(bcontent);
+    }, [btitle, bcontent]);
 
     const Modify= async () => {
         try {

@@ -1,0 +1,139 @@
+.readPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.readButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 720px;
+}
+
+.font1 {
+    color: rgb(33, 33, 230);
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.font2 {
+    color: red;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.replyFont1 {
+    color: rgb(33, 33, 230);
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.replyFont2 {
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.readTitle {
+    padding-left: 10px;
+    font-size: 20px;
+    width: 800px;
+    height: 25px;
+    margin-top: 15px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    pointer-events: none;
+}
+
+.readName {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 800px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.readArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    width: 800px;
+    height: 450px;
+    margin-bottom: 10px;
+    resize: none;
+    font-size: 20px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.aTitle {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.readSkill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px 0 10px;
+    margin-bottom: 25px;
+    width: 800px;
+}
+
+.skillTable {
+    width: 800px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.eachSkill {
+    margin: 5px 0 5px 0;
+    padding: 5px 10px 5px 10px;
+    background-color: #2D65F2;
+    border-color: #2D65F2;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+}
+
+.stateBox {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stateButton {
+    width: 200px;
+    height: 50px;
+    background-color: #2D65F2;
+    border-color: #2D65F2;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+small {
+    color: rgb(54, 99, 221);
+}
+

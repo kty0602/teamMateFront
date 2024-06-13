@@ -13,7 +13,7 @@ interface ReadPageProps {
     bnickname: string;
     modDate: string;
     link?: string;
-    bdelete: boolean
+    bdelete: boolean;
 }
 
 const ReadForm: React.FC<ReadPageProps> = ({ idx, buser, btitle, bcontent, bnickname, modDate, link, bdelete}) => {
@@ -54,7 +54,7 @@ const ReadForm: React.FC<ReadPageProps> = ({ idx, buser, btitle, bcontent, bnick
                 <text>[{modDate}]</text>
             </div>
             <div className={styles.readArea}>
-            {link && (link.includes('.mp4') ? (
+            {link && typeof link === 'string' && (link.includes('.mp4') ? (
                 <video width="320" height="240" controls>
                     <source src={link} type="video/mp4" />
                         Your browser does not support the video tag.

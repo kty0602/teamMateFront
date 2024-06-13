@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import styles from "../../css/team/TeamTable.module.css";
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { skillData } from '../../data/skillData';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/Store';
 
 interface TeamProps {
     teamData: {
@@ -27,6 +28,10 @@ interface TeamProps {
 
 
 const TeamTable: React.FC<TeamProps> = ({teamData, currentPage, onPageClick}) => {
+    const user = useSelector((state: RootState) => state.user);
+    const userId = user.idx;
+    const navigate = useNavigate();
+
     // 전체, 모집중, 모집완료 선택
     const [selected, setSelected] = useState('전체');
     const handleClick = (text: string) => {
@@ -49,6 +54,16 @@ const TeamTable: React.FC<TeamProps> = ({teamData, currentPage, onPageClick}) =>
         }
     };
 
+    const handleRegisterClick = () => {
+        if (Number(userId) === 0) {
+            alert("로그인하지 않았습니다.");
+            navigate('/login');
+        } else {
+            // 글 작성 페이지로 이동하는 로직 추가
+            navigate('/teamRegister');
+        }
+    };
+
     return(
         <div className={styles.tableBox}>
             <div className={styles.buttonTable}>
@@ -61,7 +76,7 @@ const TeamTable: React.FC<TeamProps> = ({teamData, currentPage, onPageClick}) =>
                         {text}
                     </span>
                 ))}
-                <button className={`${styles.registerButton} ${styles.comment}`}>글 작성</button>
+                <button className={`${styles.registerButton} ${styles.comment}`} onClick={handleRegisterClick}>글 작성</button>
             </div>
             <div className={styles.dataTable}>
                 {teamData.dtoList
@@ -77,7 +92,9 @@ const TeamTable: React.FC<TeamProps> = ({teamData, currentPage, onPageClick}) =>
                         <div key={item.idx} className={styles.box}>
                             <div className={styles.header}>
                                 <text className={styles.status}>{item.state === 0 ? '모집중' : '모집완료'}</text>
-                                <text className={styles.itemTitle}>{item.ttitle}</text>
+                                <Link to={`/teamRead/${item.idx}`} className={styles.aTitle}>
+                                    <text className={styles.itemTitle}>{item.ttitle}</text>
+                                </Link>
                             </div>
                             <div className={styles.body}>
                                 <text className={styles.itemText}>작성자 : {item.tnickname}</text>

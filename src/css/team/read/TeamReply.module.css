@@ -1,0 +1,70 @@
+.replyPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 300px 50px;
+    height: auto;
+    padding: 10px;
+}
+
+.replyRegister {
+    display: flex;
+    justify-content: space-between;
+}
+
+.replyComment {
+    margin: 20px auto;
+    height: auto;
+    width: 700px;
+}
+
+.replies {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 5px;
+}
+
+.replyHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+.replyContent {
+    height: auto;
+    margin-top: 5px;
+    padding: 0px 5px;
+    padding-bottom: 5px;
+}
+
+.replyText {
+    width: 400px;
+    height: 60px;
+    resize: none;
+    font-size: 18px;
+}
+
+.replyFont1 {
+    color: rgb(33, 33, 230);
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.replyFont2 {
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.replySubmit {
+    width: 70px;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.aTitle {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

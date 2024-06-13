@@ -11,6 +11,9 @@ import ReadPage from './pages/community/ReadPage';
 import ModifyPage from './pages/community/ModifyPage';
 import ReplyModifyPage from './pages/community/ReplyModifyPage';
 import TeamMatePage from './pages/TeamMatePage';
+import TeamRegisterPage from './pages/teamMate/TeamRegisterPage';
+import TeamReadPage from './pages/teamMate/TeamReadPage';
+import TeamModifyPage from './pages/teamMate/TeamModifyPage';
 
 import store from './redux/Store';
 
@@ -35,6 +38,9 @@ function App() {
 
           {/* 팀 매칭 페이지 */}
           <Route path="/teamMate"  element={<TeamMatePage/>}/>
+          <Route path="/teamRegister" element={<TeamRegisterPage/>}/>
+          <Route path="/teamRead/:idx" element={<TeamReadPage/>}/>
+          <Route path="/teamModify/:idx" element={<TeamModifyPage/>}/>
           {/* 팀 매칭 페이지 */}
         </Routes>
       </BrowserRouter>

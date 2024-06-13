@@ -58,7 +58,12 @@
 .itemTitle {
     font-size: 20px;
     font-weight: bold;
+}
+
+.aTitle {
+    text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 
 .registerButton {
