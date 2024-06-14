@@ -90,10 +90,12 @@ const TeamRead: React.FC<ReadPageProps> = ({ idx, tuser, ttitle, tcontent, tnick
                     ))}
                 </div>
             </div>
-            <div className={styles.stateBox}>
-                <small>!팀이 결정되거나 변경 사항이 있으면 버튼을 눌러 상태를 변경하세요!</small>
+            {canEdit && (
+                <div className={styles.stateBox}>
+                    <small>!팀이 결정되거나 변경 사항이 있으면 버튼을 눌러 상태를 변경하세요!</small>
                     <button className={styles.stateButton} onClick={StateUpdate}>모집 상태 변경</button>
-            </div>
+                </div>
+            )}
         </div>
     );
 }
