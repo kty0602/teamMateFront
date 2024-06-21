@@ -10,7 +10,7 @@ const Menu = () => {
                         <span>팀 매칭</span>
                     </Link>
                     <span>|</span>
-                    <Link to ="/" className={styles.link}>
+                    <Link to ="/contest" className={styles.link}>
                         <span>공모전</span>
                     </Link>
                     <span>|</span>

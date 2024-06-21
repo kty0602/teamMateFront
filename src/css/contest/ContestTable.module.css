@@ -1,0 +1,140 @@
+.contestMain {
+    position: relative;
+    width: 1000px;
+    height: 1020px;
+    margin: 30px auto;
+    
+}
+
+.contestTable {
+    margin-bottom: 1.5px;
+    max-height: 360px;
+}
+
+.box {
+    display: flex;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 5px;
+}
+
+.main {
+    display: flex;
+    width: 65%;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20px;
+    font-style: bold;
+}
+
+.host {
+    font-size: 15px;
+}
+
+.target {
+    font-size: 15px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+.submissionDate {
+    font-size: 15px;
+    color: orange;
+}
+
+.reviewDate {
+    font-size: 15px;
+    color: purple;
+}
+
+.sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+}
+
+.dDay {
+    font-weight: bold;
+    font-size: 18px;
+    color: red;
+}
+
+.inProgress {
+    display: flex;
+    font-weight: normal;
+    font-size: 13px;
+    height: 30px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: orange;
+    border-radius: 15px;
+}
+
+
+
+.pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.pagination button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+  
+.pagination button.active {
+    background-color: #0056b3;
+    color: #fff; /* 현재 페이지 글자색을 흰색으로 지정 */
+}
+  
+.pagination button.disabled {
+    background-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+  
+.pagination-arrow {
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #007bff;
+}
+  
+.pagination-arrow.disabled {
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+.aTitle {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

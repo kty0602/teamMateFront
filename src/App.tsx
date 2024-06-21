@@ -15,6 +15,7 @@ import TeamRegisterPage from './pages/teamMate/TeamRegisterPage';
 import TeamReadPage from './pages/teamMate/TeamReadPage';
 import TeamModifyPage from './pages/teamMate/TeamModifyPage';
 import TeamReplyModifyPage from './pages/teamMate/TeamReplyModifyPage';
+import ContestPage from './pages/ContestPage';
 
 import store from './redux/Store';
 
@@ -44,6 +45,10 @@ function App() {
           <Route path="/teamModify/:idx" element={<TeamModifyPage/>}/>
           <Route path="/teamReplyModify" element={<TeamReplyModifyPage/>}/>
           {/* 팀 매칭 페이지 */}
+
+          {/* 공모전 페이지 */}
+          <Route path="/contest" element={<ContestPage/>}/>
+          {/* 공모전 페이지 */}
         </Routes>
       </BrowserRouter>
     </Provider>
