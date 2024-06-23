@@ -30,13 +30,27 @@ const ContestTable: React.FC<ContestProps>  = ({contestData, currentPage, onPage
                 {contestData.dtoList.map((item) => (
                     <div key={item.idx} className={styles.box}>
                         <div className={styles.main}>
-                            <span className={styles.title}>{item.ctitle}</span>
-                            <span className={styles.host}>주최: {item.host}</span>
-                            <span className={styles.target}>대상: {item.contestant}</span>
+                            <a href={item.pageLink} target="_blank" rel="noopener noreferrer" className={styles.title}>
+                                {item.ctitle}
+                            </a>
+                            <div>
+                                <span className={styles.Label}>주최: </span> 
+                                <span className={styles.Name}>{item.host}</span>
+                            </div>
+                            <div>
+                                <span className={styles.Label}>대상: </span>
+                                <span className={styles.Name}>{item.contestant}</span>
+                            </div>
                         </div>
                         <div className={styles.date}>
-                            <span className={styles.submissionDate}>접수날짜: {item.joinDate}</span>
-                            <span className={styles.reviewDate}>심사날짜: {item.reviewDate}</span>
+                            <div>
+                                <span className={styles.submissionDate1}>접수날짜: </span>
+                                <span className={styles.submissionDate2}>{item.joinDate}</span>
+                            </div>    
+                            <div>
+                                <span className={styles.reviewDate1}>심사날짜: </span>
+                                <span className={styles.reviewDate2}>{item.reviewDate}</span>
+                            </div>
                         </div>
                         <div className={styles.sub}>
                             <span className={styles.dDay}>{item.day}</span>

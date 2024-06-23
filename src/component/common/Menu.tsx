@@ -14,7 +14,7 @@ const Menu = () => {
                         <span>공모전</span>
                     </Link>
                     <span>|</span>
-                    <Link to ="/" className={styles.link}>
+                    <Link to ="/job" className={styles.link}>
                         <span>채용정보</span>
                     </Link>
                     <span>|</span>

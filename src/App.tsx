@@ -16,9 +16,9 @@ import TeamReadPage from './pages/teamMate/TeamReadPage';
 import TeamModifyPage from './pages/teamMate/TeamModifyPage';
 import TeamReplyModifyPage from './pages/teamMate/TeamReplyModifyPage';
 import ContestPage from './pages/ContestPage';
+import JobPage from './pages/JobPage';
 
 import store from './redux/Store';
-
 
 function App() {
   return (
@@ -49,6 +49,10 @@ function App() {
           {/* 공모전 페이지 */}
           <Route path="/contest" element={<ContestPage/>}/>
           {/* 공모전 페이지 */}
+
+          {/* 취업 페이지 */}
+          <Route path="/job" element={<JobPage/>}/>
+          {/* 취업 페이지 */}
         </Routes>
       </BrowserRouter>
     </Provider>
