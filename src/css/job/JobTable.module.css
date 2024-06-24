@@ -85,12 +85,6 @@
     border-radius: 5px;
 }
 
-
-
-
-
-
-
 .pagination {
     position: absolute;
     bottom: 5px;
@@ -115,31 +109,8 @@
     background-color: #0056b3;
 }
   
-.pagination button.active {
-    background-color: #0056b3;
-    color: #fff; /* 현재 페이지 글자색을 흰색으로 지정 */
+.pagination button .active {
+    background-color: #000e1e;
+    color: #fff;
 }
   
-.pagination button.disabled {
-    background-color: #ddd;
-    color: #777;
-    cursor: not-allowed;
-}
-  
-.pagination-arrow {
-    font-size: 18px;
-    margin: 0 5px;
-    cursor: pointer;
-    color: #007bff;
-}
-  
-.pagination-arrow.disabled {
-    color: #ddd;
-    cursor: not-allowed;
-}
-
-.aTitle {
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-}

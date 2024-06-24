@@ -1,0 +1,66 @@
+.jobMain {
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.jobMenu {
+    width: 1300px;
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.click {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5); /* 그림자 효과 추가 */
+}
+
+.div1, .div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    height: 200px; /* 높이 설정 */
+    position: relative; /* 자식 요소의 위치 고정을 위한 상대 위치 설정 */
+}
+
+.div1 div, .div2 div {
+    display: flex;
+    flex-wrap: wrap; /* 여러 줄로 나열되도록 설정 */
+    width: 100%;
+}
+
+.div1 div div, .div2 div div {
+    width: 33%; /* 각 체크박스가 3줄로 나열되도록 설정 */
+    box-sizing: border-box;
+    padding: 5px; /* 여백 추가 */
+}
+
+.header {
+    width: 100%;
+    padding: 5px 0;
+    background-color: gray;
+    color: white;
+    font-size: 25px;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    position: sticky; /* 스크롤 시 고정 */
+    top: 0; /* 상단에 고정 */
+    z-index: 1; /* 다른 요소보다 앞에 위치 */
+}

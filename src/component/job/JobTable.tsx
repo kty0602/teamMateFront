@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from "../../css/job/JobTable.module.css";
 
 interface JobProps {
@@ -19,12 +20,48 @@ interface JobProps {
         next: boolean;
         pageList: number[];
     };
-    currentPage: number; // 추가: 현재 페이지 상태
+    currentPage: number;
     onPageClick: (pageNum: number) => void;
 }
 
-const JobTable: React.FC<JobProps> = ({jobData, currentPage, onPageClick}) => {
-    return(
+const JobTable: React.FC<JobProps> = ({ jobData, currentPage, onPageClick }) => {
+    const renderPageNumbers = () => {
+        const pageNumbers = [];
+        const totalPage = jobData.totalPage;
+        const startPage = Math.max(1, currentPage - Math.floor(10 / 2));
+        const endPage = Math.min(totalPage, startPage + 9);
+
+        // 이전 버튼
+        pageNumbers.push(
+            <button key="prev" onClick={() => onPageClick(currentPage - 1)} disabled={currentPage === 1}>
+                이전
+            </button>
+        );
+
+        // 페이지 번호 버튼
+        for (let i = startPage; i <= endPage; i++) {
+            pageNumbers.push(
+                <button
+                    key={i}
+                    className={i === currentPage ? 'active' : ''}
+                    onClick={() => onPageClick(i)}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        // 다음 버튼
+        pageNumbers.push(
+            <button key="next" onClick={() => onPageClick(currentPage + 1)} disabled={currentPage === totalPage}>
+                다음
+            </button>
+        );
+
+        return pageNumbers;
+    };
+
+    return (
         <div className={styles.jobMain}>
             <div className={styles.jobTable}>
                 {jobData.dtoList.map((item) => (
@@ -49,19 +86,11 @@ const JobTable: React.FC<JobProps> = ({jobData, currentPage, onPageClick}) => {
                             </a>
                             <span className={styles.Label}>{item.date}</span>
                         </div>
-                    </div>   
+                    </div>
                 ))}
             </div>
             <div className={styles.pagination}>
-                {jobData.pageList.map((pageNum) => (
-                    <button
-                        key={pageNum}
-                        className={pageNum === currentPage ? 'active' : ''}
-                        onClick={() => onPageClick(pageNum)}
-                    >
-                        {pageNum}
-                    </button>
-                ))}
+                {renderPageNumbers()}
             </div>
         </div>
     );
